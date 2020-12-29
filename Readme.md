@@ -30,9 +30,28 @@ main(){
     print("Hello World");
 }
 ```
-## 1.Different DataTypes in Dart :
+## 1.Different Primitive  DataTypes in Dart :
 **Before Starting :** All datatypes in dart are at base is just an object.
-Value of each variable declared using these datatype is **null**.
+Value of each variable declared using these datatype is **null** by default.
+
+---
+**More Remarks** : 
+    
+1. <ins>Dart is statically typed language</ins> means you have to explicitly declare variable's datatype and it cannot be changed at runtime. 
+1. **var** keyword is used to auto declare the datatype of variable but dissimilar of _var in js_
+once variable datatype set using var keyword it can't be changed.
+    
+    Note : by default var assign the dynamic datatype to variable but it can be differ if you initialize the variable during declaration. 
+    ```dart
+    var var1 ;//dynamic
+    var1 = 'a';
+    var1 = 2;//No Errors 
+    var var2 = 123;//int
+    var2 = "fire";//Error: A value of type 'String' can't be assigned to a variable of type 'int'.
+    ```
+1. **dynamic** keyword which is dart object under the hood is used to dynamically typed assign datatype to variable it associated with.
+
+---
 - **Numbers** 
     holds the numeric value. 
     The num type is an inherited data type of the int and double types.
@@ -265,3 +284,7 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
     //since l is reference to object of List which is new for each list
     print([1,2,3]==l);//Example
     ```
+
+    >><a href=" ">For More Detail about Map class in dart</a>
+
+    _Before moving to let us take a glance over **var** keyword and **dynamic** 
