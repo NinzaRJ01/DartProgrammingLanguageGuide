@@ -1,14 +1,14 @@
 # Dart Programming Fast and Simple Guide
-*This Guide is for those, who is already familiar to programming and have desire to learn dart also for various purposes.*
+*This Guide is for those, who were/are already familiar to programming and have desire to learn dart also for various purposes.*
 
 ---
 
 **Note :** This guide not gonna brush over the simple programming facts like
 
-- what is loop
-- what is datatype 
-- what is condition statement
-- what is variable  etc.
+- what is loop ?
+- what is datatype ?
+- what is condition statement ?
+- what is variable ? and so on.
 
 If you are unfamiliar with any of above terms take a slight look on this terms before starting.
 
@@ -264,5 +264,4 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
     print(obj[[1,2,3]]);
     //since l is reference to object of List which is new for each list
     print([1,2,3]==l);//Example
-
     ```
