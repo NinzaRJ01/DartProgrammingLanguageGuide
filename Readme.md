@@ -1,6 +1,8 @@
 # Dart Programming Fast and Simple Guide
 *This Guide is for those, who were/are already familiar to programming and have desire to learn dart also for various purposes.*
 
+![](./gif_resources/hello_dart.gif)
+
 ---
 
 **Note :** This guide not gonna brush over the simple programming facts like
