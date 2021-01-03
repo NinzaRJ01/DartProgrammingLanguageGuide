@@ -66,11 +66,18 @@ once variable datatype set using var keyword it can't be changed.
 
     | **Keyword** - num |
 
-    Number in dart can further classified as:
+
+    |Number in dart can further classified as:|
+    |-------------------|---------|
+    | **int**  used  to represent integers|
+    | **double** used to represent floating point values| 
+    
+    
     - *int*
     is used to represent whole numbers values.
 
     | **Keyword** - int |
+    
     ```dart
     int mynum = 4;
     int mynum2 = 9999;
@@ -91,7 +98,7 @@ once variable datatype set using var keyword it can't be changed.
     - *double*
     is  used to represent 64-bit floating-point numbers.
 
-    |**Keyword** - double | 
+    | **Keyword** - double | 
     ```dart
     double mynum = 434.22;
     double mynum1 = -4331.233;
@@ -110,7 +117,7 @@ once variable datatype set using var keyword it can't be changed.
 
 - **Strings** is used to represent a sequence of characters. It is a sequence of UTF-16 code units. The keyword string is used to represent string literals.
 
-    |**Keyword** - String |
+    | **Keyword** - String |
     
     In dart string is represent as text between ""(double quotes) or ''(single quotes ) also known as *String Literals*.
     ```dart
@@ -132,7 +139,7 @@ once variable datatype set using var keyword it can't be changed.
     >> <a href="">For more detail on String class in dart.</a>
 - **Booleans** represents Boolean values true and false. <ins>The keyword bool is used to represent a Boolean literal in DART. </ins>
 
-    |**Keyword** - bool |
+    | **Keyword** - bool |
     ```dart
     bool mybool = false;
     bool mybool1 = true;
@@ -147,8 +154,10 @@ once variable datatype set using var keyword it can't be changed.
     print("3 "+mybool4.toString());//null is no value is given
     ```
 - **Lists (similar to Arrays)**
-     is similar to arrays in other programming languages. A list is used to represent a collection of objects. It is an ordered group of objects. 
-     
+     is similar to arrays in other programming languages. A list is used to represent a collection of objects. It is an ordered group of objects.
+
+     | **Keyword** - List |
+
      *Remarks* : . The <ins>dart:core library</ins> provides the List class that enables creation and manipulation of lists.
      
      - **Fixed Sized List**
@@ -297,6 +306,7 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
     >>> Note  while using list or any other object as key that it will take the _reference of obj_ as key not the value of object itself.
 
     Example :
+
     ```dart
     Map myMap = new Map();
     List l = [1,2,3];//list
@@ -319,4 +329,3 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
 
     >><a href=" ">For More Detail about Map class in dart</a>
 
-    _Before moving to let us take a glance over **var** keyword and **dynamic** 
