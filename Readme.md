@@ -113,7 +113,7 @@ once variable datatype set using var keyword it can't be changed.
     3 32
     */
     ```
-    >> <a href="">For more detail on Number, Int, Double class and their property</a>
+    >> <a href="https://github.com/NinzaRJ01/DartProgrammingLanguageGuide/tree/master/MajorDataTypesInDart/Num_Class">For more detail on Number, Int, Double class and their property</a>
 
 - **Strings** is used to represent a sequence of characters. It is a sequence of UTF-16 code units. The keyword string is used to represent string literals.
 
