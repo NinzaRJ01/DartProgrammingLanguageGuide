@@ -72,7 +72,6 @@ once variable datatype set using var keyword it can't be changed.
     | **int**  used  to represent integers|
     | **double** used to represent floating point values| 
     
-    
     - *int*
     is used to represent whole numbers values.
 
