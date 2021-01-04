@@ -1,0 +1,333 @@
+# Dart Programming Fast and Simple Guide
+*This Guide is for those, who were/are already familiar to programming and have desire to learn dart also for various purposes.*
+
+![](./gif_resources/hello_dart.gif)
+
+---
+
+**Note :** This guide not gonna brush over the simple programming facts like
+
+- what is loop ?
+- what is datatype ?
+- what is condition statement ?
+- what is variable ? and so on.
+
+If you are unfamiliar with any of above terms take a slight look on this terms before starting.
+
+
+---
+First of all we gonna cover basic syntax and  topics on  of dart language like :
+1. Data Types
+1. How to Define A Variable
+2. Print Statement in Dart
+3. Different operators in Dart
+4. Loops in Dart
+5. If Else Statement in Dart
+6. Function in Dart
+ 
+**Before We go onto basics, let us see an hello world program in dart language**
+
+```dart
+main(){
+    print("Hello World");
+}
+```
+## 1.Different Primitive  DataTypes in Dart :
+**Before Starting :** All datatypes in dart are at base is just an object.
+Value of each variable declared using these datatype is **null** by default.
+
+---
+**More Remarks** : 
+    
+1. <ins>Dart is statically typed language</ins> means you have to explicitly declare variable's datatype and it cannot be changed at runtime. 
+1. **var** keyword is used to auto declare the datatype of variable but dissimilar of _var in js_
+once variable datatype set using var keyword it can't be changed.
+    
+    Note : by default var assign the dynamic datatype to variable but it can be differ if you initialize the variable during declaration. 
+    ```dart
+    var var1 ;//dynamic
+    var1 = 'a';
+    var1 = 2;//No Errors 
+    var var2 = 123;//int
+    var2 = "fire";//Error: A value of type 'String' can't be assigned to a variable of type 'int'.
+    ```
+1. **dynamic** keyword which is dart object under the hood is used to dynamically assign datatype to variable it associated with.
+    ```dart
+    dynamic a = 40;
+    a ='a'; //works
+    a = true;
+    a = ['a','b',2,true];
+    ```
+
+---
+- **Numbers** 
+    holds the numeric value. 
+    The num type is an inherited data type of the int and double types.
+
+    | **Keyword** - num |
+
+    Number in dart can further classified as:
+    - *int*
+    is used to represent whole numbers values.
+
+    | **Keyword** - int |
+    ```dart
+    int mynum = 4;
+    int mynum2 = 9999;
+    int mynum3 = -232;
+    //below code will give an error
+    int mynum4 = 33.34;//Error: A value of type 'double' can't be assigned to a variable of type 'int'.
+    
+    //Note : Sometime you may need to convert int to string datatype at this you may use toString method in-built to num object.
+    print("1 "+ mynum.toString());
+    print("2 "+ mynum2.toString());
+    print("3 "+ mynum3.toString());
+    /*Output :
+    1 4
+    2 9999
+    3 -232
+    */
+    ```
+    - *double*
+    is  used to represent 64-bit floating-point numbers.
+
+    | **Keyword** - double | 
+    ```dart
+    double mynum = 434.22;
+    double mynum1 = -4331.233;
+    double mynum2 = 32;
+    //Note : Sometime you may need to convert double to string datatype at this you may use toString method in-built to num object.
+    print("1 "+ mynum.toString());
+    print("2 "+ mynum1.toString());
+    print("3 "+ mynum2.toString());
+    /*Output:
+    1 434.22
+    2 -4331.233
+    3 32
+    */
+    ```
+    >> <a href="">For more detail on Number, Int, Double class and their property</a>
+
+- **Strings** is used to represent a sequence of characters. It is a sequence of UTF-16 code units. The keyword string is used to represent string literals.
+
+    | **Keyword** - String |
+    
+    In dart string is represent as text between ""(double quotes) or ''(single quotes ) also known as *String Literals*.
+    ```dart
+    String mystr = "hello";
+    String mystr2 = "dart";
+    String mystr3 = "652";
+    String mystr4 = 54;
+    //Error: A value of type 'int' can't be assigned to a variable of type 'String'
+    //String mystr4 = 54; 
+    print("1 "+mystr);
+    print("2 "+mystr2);
+    print("3 "+mystr3);
+    /*Output
+    1 hello
+    2 dart
+    3 652
+    */
+    ```
+    >> <a href="">For more detail on String class in dart.</a>
+- **Booleans** represents Boolean values true and false. <ins>The keyword bool is used to represent a Boolean literal in DART. </ins>
+
+    | **Keyword** - bool |
+    ```dart
+    bool mybool = false;
+    bool mybool1 = true;
+    bool mybool2 = 1;//Error: A value of type 'int' can't be assigned to a variable of type 'bool'.
+    bool mybool3 = 0;//Error: A value of type 'int' can't be assigned to a variable of type 'bool'.
+    bool mybool4;
+    bool mybool5 ="true";//Error: A value of type 'String' can't be assigned to a variable of type 'bool'.
+    bool mybool6 ="false";//Error: A value of type 'String' can't be assigned to a variable of type 'bool'.
+
+    print("1 "+mybool.toString());
+    print("2 "+mybool1.toString());
+    print("3 "+mybool4.toString());//null is no value is given
+    ```
+- **Lists (similar to Arrays)**
+     is similar to arrays in other programming languages. A list is used to represent a collection of objects. It is an ordered group of objects.
+
+     | **Keyword** - List |
+
+     *Remarks* : . The <ins>dart:core library</ins> provides the List class that enables creation and manipulation of lists.
+     
+     - **Fixed Sized List**
+     
+        In this type of list, length can't change at runtime.
+
+        **Declaration Syntax :**
+        
+        >> List Declare using this syntax will be fixed size list.
+        ```dart 
+        List list-name = new List(initialization_size);
+        ```
+        >> Internalizing list element after declaration
+        ```dart
+        List myList = new List(n);
+        myList[index] = val;//index can be any value between 0 to n-1 
+        ```
+        **Example of Nested Lists :-**
+        
+        ```dart
+        List myList = new List(6);
+        for(int i=0;i<6;i++){
+        myList[i]= "hello "+i.toString();
+        }
+        List myList2 = ["one",2,"three"];
+        List myList3 =[myList,myList2];
+        print(myList);
+        print(myList2);
+        print(myList3);
+        
+        /* Output :
+        [hello 0, hello 1, hello 2, hello 3, hello 4, hello 5]
+        [one, 2, three]
+        [[hello 0, hello 1, hello 2, hello 3, hello 4, hello 5], [one, 2, three]]   
+        */
+        ```
+     - **Resizable List**
+
+        ->Syntax is  same as of Fixed List but you can add more element, change the length of current List object via **add()** method.
+        Note : A list is resizable only if initialized using following syntax;
+        
+        Syntax1 :
+        
+        ```dart
+        List l = new List();//empty initialization of list using constructor with no para
+        //l  is a variable-name
+        ```
+        
+        Syntax2 :
+        
+        ```dart
+        List l = [];
+        //Using List literal or 
+        List l = [val1,val2,...val_n];
+        //l is a variable-name
+        ```
+        
+        First method: 
+        
+        ```dart
+        List myList = new List();
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+        myList.add("hy");
+        myList.add("true");
+        myList.add(true);
+        //i won't recommend this if input value need to be changed after initialization.
+        ```
+        
+        Second method:
+        
+        ```dart
+        List myList2 = ['a','b','c'];//resize the existing list
+        myList2.add(4);
+        print(myList);
+        print(myList2);
+        /*Output
+        [1, 2, 3, hy, true, true]
+        [a, b, c, 4]
+        */
+        myList2[4] ="five";//This generate out of index error. 
+        ```
+        
+        More Examples :
+        
+        ```dart
+         List myList = new List(6);
+        for(int i=0;i<6;i++){
+        myList[i]= "hello "+i.toString();
+        }
+        List myList2 = ["one",2,"three"];
+        myList2.add(3);
+        List myList3 =[myList,myList2];
+        var myList4 = new List();
+        myList4.add(5);
+        //   myList3[2]=5;
+        print(myList);
+        print(myList2);
+        print(myList3);
+        print(myList4);
+        /*Output
+        [hello 0, hello 1, hello 2, hello 3, hello 4, hello 5]
+        [one, 2, three, 3]
+        [[hello 0, hello 1, hello 2, hello 3, hello 4, hello 5], [one, 2, three, 3]]
+        [5]
+        */
+        ```
+        
+        **Fixed Size List vs Resizable List**
+        ```dart
+        List l = new List(2);//Fixed Size List
+        l[0]=2;
+        l.add(1);//It will Throw
+        //Unsupported operation: addError: Unsupported operation: add
+        print(l);
+        List p = new List();
+        p.add(2);//No problem
+
+        ```
+    >> <a href=" ">For More Detail about List class in dart</a>
+- **Maps** 
+object is a key and value pair. Keys and values on a map may be of any type. It is a dynamic collection. 
+
+    | **Keyword** - Map |
+    
+    **Syntax :**
+    ```dart
+    Map myMap = new Map();
+    myMap[key1] =val1;
+    myMap[key2] =val2;
+    myMap[key3] =val3;
+    ....
+    myMap[key_n] =val_n;
+    //val1,val2,val3...val_n can be of any datatypes, objects etc.
+    //key1,key2,key3...key_n can be of any datatypes,objects etc.
+    ```
+    
+    Example :
+    ```dart
+    Map obj = new Map();
+    obj["mykey"] ="myVal";//String as key
+    List l = [1,2,3];//list
+    obj[l] ="list as key";//list as key
+    obj[true] =false;//boolean value as key
+    obj[23] =43;//integer value as key
+    print(obj["mykey"]);
+    print(obj[l]);
+    print(obj[true]);
+    print(obj[23]);
+    /*Output :
+    myVal
+    list as key
+    */
+    ```
+    >>> Note  while using list or any other object as key that it will take the _reference of obj_ as key not the value of object itself.
+
+    Example :
+    ```dart
+    Map myMap = new Map();
+    List l = [1,2,3];//list
+    obj[l] ="List as key";
+    print("Before : "+ obj[l]);
+    l[1] = 4;//changes
+    print("After  : "+obj[l]);//same result 
+    /*Output
+    Before : List as key
+    After  : List as key
+    */
+    //More 
+    obj[[5,6,7]]= "Another One";
+    print(obj[[5,6,7]]);
+    //and also
+    print(obj[[1,2,3]]);
+    //since l is reference to object of List which is new for each list
+    print([1,2,3]==l);//Example
+    ```
+
+    >><a href=" ">For More Detail about Map class in dart</a>
+
