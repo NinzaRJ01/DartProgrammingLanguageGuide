@@ -34,6 +34,8 @@ main(){
   print("6: "+myDouble.toString());
   myDouble =num.tryParse("aa3");//pass null if not able parse to int or double
   print("7: "+myDouble.toString());
+  myDouble = num.parse("vv2",printHi).toDouble();
+  print("8: "+myDouble.toString());
 
 
 
