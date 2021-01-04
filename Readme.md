@@ -68,7 +68,7 @@ once variable datatype set using var keyword it can't be changed.
 
 
     |Number in dart can further classified as:|
-    |-------------------|---------|
+    |------------------|
     | **int**  used  to represent integers|
     | **double** used to represent floating point values| 
     
