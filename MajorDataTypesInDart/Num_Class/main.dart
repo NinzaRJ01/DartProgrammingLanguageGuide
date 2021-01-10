@@ -50,5 +50,21 @@ main(){
   // myDouble =myNumber;//Error type 'int' is not a subtype of type 'double'
   myDouble=myNumber.toDouble();
   print("myDouble = $myDouble");
-
+  //clamp(num lowerlimit,num upperlimt)
+  myNumber =873;
+  print("Before : "+myNumber.toString());
+  //close to high
+  print("clamp 1: "+myNumber.clamp(0, 1212).toString());
+  print("clamp 2: "+myNumber.clamp(0, 872).toString());
+  print("clamp 3: "+myNumber.clamp(0, 50).toString());
+  // print("clamp 4: "+myNumber.clamp(0, -50).toString());//Unhandled exception
+  print("clamp 5: "+myNumber.clamp(-100, 0).toString());
+  print("clamp 6: "+myNumber.clamp(-110, -90).toString());
+  //close to low
+  print("clamp 7: "+myNumber.clamp(872, 1000).toString());
+  print("clamp 8: "+myNumber.clamp(874, 1000).toString());
+  print("clamp 9: "+myNumber.clamp(1212.2323, 12121).toString());
+  //toInt()
+  myNumber = 2323.232.toInt();
+  print("toInt : "+myNumber.toString());
 }

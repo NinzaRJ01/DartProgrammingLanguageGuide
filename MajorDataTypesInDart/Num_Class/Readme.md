@@ -89,7 +89,39 @@ But in the later version of dart sdk, it has the two **static method** named :
     myDouble = 2.0
   */
   ```
-
+- _toInt() :_ Truncates this [num] to an integer and returns the result as an [int].
+    ```dart
+  num myNum =1.23232;
+  int myInt = myNum;//Error
+  myInt =myNum.toInt();//Works  
+  ```
+- _clamp(num lowerLimit,num upperLimit) :_ Returns this [num] clamped to be in the range [lowerLimit]-[upperLimit].
+  ```dart
+  myNumber =873;
+  print("Before : "+myNumber.toString());
+  //close to high
+  print("clamp 1: "+myNumber.clamp(0, 1212).toString());
+  print("clamp 2: "+myNumber.clamp(0, 872).toString());
+  print("clamp 3: "+myNumber.clamp(0, 50).toString());
+  // print("clamp 4: "+myNumber.clamp(0, -50).toString());//Unhandled exception
+  print("clamp 5: "+myNumber.clamp(-100, 0).toString());
+  print("clamp 6: "+myNumber.clamp(-110, -90).toString());
+  //close to low
+  print("clamp 7: "+myNumber.clamp(872, 1000).toString());
+  print("clamp 8: "+myNumber.clamp(874, 1000).toString());
+  print("clamp 9: "+myNumber.clamp(1212.2323, 12121).toString());
+  /*Output :
+  Before : 873
+    clamp 1: 873
+    clamp 2: 872
+    clamp 3: 50
+    clamp 5: 0
+    clamp 6: -90
+    clamp 7: 873
+    clamp 8: 874
+    clamp 9: 1212.2323
+  */
+  ```
    ### More examples:
   
 ```dart
@@ -139,6 +171,23 @@ main(){
   // myDouble =myNumber;//Error type 'int' is not a subtype of type 'double'
   myDouble=myNumber.toDouble();
   print("myDouble = $myDouble");
+  //clamp(num lowerlimit,num upperlimt)
+  myNumber =873;
+  print("Before : "+myNumber.toString());
+  //close to high
+  print("clamp 1: "+myNumber.clamp(0, 1212).toString());
+  print("clamp 2: "+myNumber.clamp(0, 872).toString());
+  print("clamp 3: "+myNumber.clamp(0, 50).toString());
+  // print("clamp 4: "+myNumber.clamp(0, -50).toString());//Unhandled exception
+  print("clamp 5: "+myNumber.clamp(-100, 0).toString());
+  print("clamp 6: "+myNumber.clamp(-110, -90).toString());
+  //close to low
+  print("clamp 7: "+myNumber.clamp(872, 1000).toString());
+  print("clamp 8: "+myNumber.clamp(874, 1000).toString());
+  print("clamp 9: "+myNumber.clamp(1212.2323, 12121).toString());
+  //toInt()
+  myNumber = 2323.232.toInt();
+  print("toInt : "+myNumber.toString());
 }
 /*Output :
 1: 9
@@ -156,6 +205,16 @@ Value of pi : 3.14
 New Value of pi : 3.1423242424212123
 New Value of myNumber is : 123400.0
 myDouble = 2.0
+Before : 873
+clamp 1: 873
+clamp 2: 872
+clamp 3: 50
+clamp 5: 0
+clamp 6: -90
+clamp 7: 873
+clamp 8: 874
+clamp 9: 1212.2323
+toInt : 2323
 */
 ```
 
