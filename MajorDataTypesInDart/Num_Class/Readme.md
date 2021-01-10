@@ -34,10 +34,10 @@ But in the later version of dart sdk, it has the two **static method** named :
         Example :
    
         ```dart
-            num myFun(String input){
-            print("My fun is exceuting");
+        num myFun(String input){
+        print("My fun is exceuting");
           return 0;
-          }
+        }
         main(){
         int myInt = num.parse("",myFun);
         print(myInt);//Output : 0 
@@ -54,8 +54,45 @@ But in the later version of dart sdk, it has the two **static method** named :
         myNum = num.tryParse("5.22");//will return 5.22
         myNum = num.tryParse("Hi");//will return null
         ```
+**Other Important Non-Static Methods:**
+    
+- _toString() :_ Returns the shortest string that correctly represent the input number.
+  ```dart
+  num myNumber = 2;
+  print("Hi, val of my number is "+myNumber.toString());
+  //Out: Hi, val of my number is 2
+  myNumber = 3.14;
+  print("Value of pi : "+myNumber.toString());
+  //Out: Value of pi : 3.14
+  ```
+   **Note :** the conversion may round the output if the returned string.
+  
+    ```dart
+    myNumber = 3.14232424242121232487878787878782;
+    print("New Value of pi : "+myNumber.toString());
+   myNumber = 1.234e5;
+   print("New Value of myNumber is : "+myNumber.toString());
+   
+  /*
+  Output:
+  New Value of pi : 3.1423242424212123
+  New Value of myNumber is : 123400.0
+  */
+   ```
+- _toDouble() :_ Return this [num] as a [double].
+    ```dart
+  num myNum = 2;
+  double myDouble =myNumber;//Error : type 'int' is not a subtype of type 'double'
+  myDouble = myNumber.toDouble();//No error 
+   print("myDouble = $myDouble");
+  /*Output:
+    myDouble = 2.0
+  */
+  ```
+
    ### More examples:
-   ```dart
+  
+```dart
 num printHi(String input){
   print("Hi"+input.toString());
   return -1;
@@ -88,6 +125,20 @@ main(){
   print("7: "+myDouble.toString());
   myDouble = num.parse("vv2",printHi).toDouble();
   print("8: "+myDouble.toString());
+  //toString() method Examples  - - >
+  num myNumber = 2;
+  print("Hi, val of my number is "+myNumber.toString());
+  myNumber=3.14;
+  print("Value of pi : "+myNumber.toString());
+  myNumber = 3.14232424242121232487878787878782;
+  print("New Value of pi : "+myNumber.toString());
+  myNumber = 1.234e5;
+  print("New Value of myNumber is : "+myNumber.toString());
+  //toDouble() method Example - - >
+  myNumber = 2;
+  // myDouble =myNumber;//Error type 'int' is not a subtype of type 'double'
+  myDouble=myNumber.toDouble();
+  print("myDouble = $myDouble");
 }
 /*Output :
 1: 9
@@ -100,6 +151,11 @@ Hi
 7: null
 Hivv2
 8: -1.0
+Hi, val of my number is 2
+Value of pi : 3.14
+New Value of pi : 3.1423242424212123
+New Value of myNumber is : 123400.0
+myDouble = 2.0
 */
 ```
 

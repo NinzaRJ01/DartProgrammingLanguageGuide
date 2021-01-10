@@ -36,8 +36,19 @@ main(){
   print("7: "+myDouble.toString());
   myDouble = num.parse("vv2",printHi).toDouble();
   print("8: "+myDouble.toString());
-
-
-
+  //toString() method Examples  - - >
+  num myNumber = 2;
+  print("Hi, val of my number is "+myNumber.toString());
+  myNumber=3.14;
+  print("Value of pi : "+myNumber.toString());
+  myNumber = 3.14232424242121232487878787878782;
+  print("New Value of pi : "+myNumber.toString());
+  myNumber = 1.234e5;
+  print("New Value of myNumber is : "+myNumber.toString());
+  //toDouble() method Example - - >
+  myNumber = 2;
+  // myDouble =myNumber;//Error type 'int' is not a subtype of type 'double'
+  myDouble=myNumber.toDouble();
+  print("myDouble = $myDouble");
 
 }
