@@ -1,4 +1,5 @@
-# Dart Programming Fast and Simple Guide
+<h1 align ="center"> <img src="./img_resources/dart_log.png" height="10%" width ="10%"> Dart Programming Fast and Simple Guide </h1>
+
 *This Guide is for those, who were/are already familiar to programming and have desire to learn dart also for various purposes.*
 
 ![](./gif_resources/hello_dart.gif)

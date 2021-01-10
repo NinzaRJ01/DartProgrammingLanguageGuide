@@ -1,4 +1,5 @@
-# Dart Programming Fast and Simple Guide
+<h1 align ="center"> <img src="./img_resources/dart_log.png" height="15%" width ="15%"> Dart Programming Fast and Simple Guide </h1>
+
 *This Guide is for those, who were/are already familiar to programming and have desire to learn dart also for various purposes.*
 
 ![](./gif_resources/hello_dart.gif)
@@ -66,11 +67,17 @@ once variable datatype set using var keyword it can't be changed.
 
     | **Keyword** - num |
 
-    Number in dart can further classified as:
+
+    |Number in dart can further classified as:|
+    |------------------|
+    | **int**  used  to represent integers|
+    | **double** used to represent floating point values| 
+    
     - *int*
     is used to represent whole numbers values.
 
     | **Keyword** - int |
+    
     ```dart
     int mynum = 4;
     int mynum2 = 9999;
@@ -106,7 +113,7 @@ once variable datatype set using var keyword it can't be changed.
     3 32
     */
     ```
-    >> <a href="">For more detail on Number, Int, Double class and their property</a>
+    >> <a href="https://github.com/NinzaRJ01/DartProgrammingLanguageGuide/tree/master/MajorDataTypesInDart/Num_Class">For more detail on Number, Int, Double class and their property</a>
 
 - **Strings** is used to represent a sequence of characters. It is a sequence of UTF-16 code units. The keyword string is used to represent string literals.
 
@@ -193,23 +200,18 @@ once variable datatype set using var keyword it can't be changed.
         Note : A list is resizable only if initialized using following syntax;
         
         Syntax1 :
-        
         ```dart
         List l = new List();//empty initialization of list using constructor with no para
         //l  is a variable-name
         ```
-        
         Syntax2 :
-        
         ```dart
         List l = [];
         //Using List literal or 
         List l = [val1,val2,...val_n];
         //l is a variable-name
         ```
-        
         First method: 
-        
         ```dart
         List myList = new List();
         myList.add(1);
@@ -220,9 +222,7 @@ once variable datatype set using var keyword it can't be changed.
         myList.add(true);
         //i won't recommend this if input value need to be changed after initialization.
         ```
-        
         Second method:
-        
         ```dart
         List myList2 = ['a','b','c'];//resize the existing list
         myList2.add(4);
@@ -234,9 +234,7 @@ once variable datatype set using var keyword it can't be changed.
         */
         myList2[4] ="five";//This generate out of index error. 
         ```
-        
         More Examples :
-        
         ```dart
          List myList = new List(6);
         for(int i=0;i<6;i++){
@@ -259,7 +257,6 @@ once variable datatype set using var keyword it can't be changed.
         [5]
         */
         ```
-        
         **Fixed Size List vs Resizable List**
         ```dart
         List l = new List(2);//Fixed Size List
@@ -309,6 +306,7 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
     >>> Note  while using list or any other object as key that it will take the _reference of obj_ as key not the value of object itself.
 
     Example :
+
     ```dart
     Map myMap = new Map();
     List l = [1,2,3];//list
