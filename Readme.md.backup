@@ -329,5 +329,42 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
 
     >><a href=" ">For More Detail about Map class in dart</a>
 
-#### Fun Remark :
+
+><h3 align="center">More About Dart</h3>
+
+ - **Is dart an Interpreted or a Compiled Language ?** 
+
+    Actually, it can be both interpreted and compiled. Yes, it provides functionality for _ahead of time_ (AOT) compilation used primarily in **production code**  and also  for _just in time_ compilation which is beneficial while **developing code**.
+
+    Commands for compiling different dart executables :
+    ```bash
+    dart compile <sub-command> <dart-file>
+    ```
+    **Sub-Commands :**
+
+    |sub-commands | overview |
+    |-------------|----------|
+    |aot-snapshot |  Compile Dart to an AOT snapshot.|
+    |exe |           Compile Dart to a self-contained executable.|
+    |jit-snapshot |  Compile Dart to a JIT snapshot.|
+    |js            | Compile Dart to JavaScript.|
+    |kernel        |Compile Dart to a kernel snapshot. |
+
+    **Example (for binary system executable) :**
+
+    - Creating 
+
+    ```bash
+    dart compile exe main.dart
+    ```
+    Running (in linux env)    
+    ```bash
+    ./main.exe
+    ```
+
+
+
+
+
+
  

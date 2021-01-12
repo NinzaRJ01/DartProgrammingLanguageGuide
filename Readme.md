@@ -357,7 +357,8 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
     ```bash
     dart compile exe main.dart
     ```
-    Running (in linux env)    
+    - Running (in linux env)  
+      
     ```bash
     ./main.exe
     ```
