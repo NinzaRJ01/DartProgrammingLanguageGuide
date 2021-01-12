@@ -1,4 +1,4 @@
-<h1 align ="center"> <img src="./img_resources/dart_log.png" height="15%" width ="15%"> Dart Programming Fast and Simple Guide </h1>
+<h1 align ="center"> <img src="./img_resources/dart_log.png" height="10%" width ="10%"> Dart Programming Fast and Simple Guide </h1>
 
 *This Guide is for those, who were/are already familiar to programming and have desire to learn dart also for various purposes.*
 
@@ -329,3 +329,5 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
 
     >><a href=" ">For More Detail about Map class in dart</a>
 
+#### Fun Remark :
+ 
