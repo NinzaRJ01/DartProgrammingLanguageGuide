@@ -125,20 +125,54 @@ But in the later version of dart sdk, it has the two **static method** named :
 
 - _round() :_ round and return the num(int,double) to the nearest int.
   
+    ```dart
+    myNumber = 2323.232.round();
+    print("Round : "+myNumber.toString());//Round : 2323
+    myNumber = 234.982.round();
+    print("Round : "+myNumber.toString());//Round : 235
+    ```
 - _floor() :_ return nearest integer to smaller than current num.
-  
+    ```dart
+    myNumber = 2323.232.floor();
+  print("Floor : "+myNumber.toString());//Floor : 2323
+  ```  
+
 - _ceil() :_ return nearest integer which is greater than current num.
+    ```dart
+  myNumber = 2323.232.ceil();
+  print("Ceil : "+myNumber.toString());  
+  ```
   
 - _roundToDouble() :_ Returns the double integer value closest to num.
+    ```dart
+  myDouble = 2323.232.roundToDouble();
+  print("Round(Double) : "+myDouble.toString());
+  myDouble = 234.982.roundToDouble();
+  print("Round(Double) : "+myDouble.toString());
+  ```
   
 - _floorToDouble() :_ Returns the greatest double integer value no greater than current num.
-  
+    ```dart
+  myDouble = 2323.232.floorToDouble();
+  print("Floor(Double) : "+myDouble.toString());  
+  ```
 - _ceilToDouble() :_ Returns the least double integer value no smaller than current num.
-  
+  ```dart
+   myDouble = 2323.232.ceilToDouble();
+  print("Ceil(Double) : "+myDouble.toString());
+  ```
 - _truncateToDouble() :_  Returns the double integer value obtained by discarding any fractional
      digits from the double value of `this`.
-  
+  ```dart
+  myDouble = 2323.232.truncateToDouble();
+  print("Truncate(Double) : "+myDouble.toString());
+  ```
 - _truncate() :_ Return int by removing fractional part of num.
+  ```dart
+    myNumber = 2323.232.truncate();
+  print("Truncate : "+myNumber.toString());
+
+  ```
    ### More examples:
 
 ```dart
