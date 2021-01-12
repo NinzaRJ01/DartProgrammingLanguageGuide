@@ -122,8 +122,25 @@ But in the later version of dart sdk, it has the two **static method** named :
     clamp 9: 1212.2323
   */
   ```
-   ### More examples:
+
+- _round() :_ round and return the num(int,double) to the nearest int.
   
+- _floor() :_ return nearest integer to smaller than current num.
+  
+- _ceil() :_ return nearest integer which is greater than current num.
+  
+- _roundToDouble() :_ Returns the double integer value closest to num.
+  
+- _floorToDouble() :_ Returns the greatest double integer value no greater than current num.
+  
+- _ceilToDouble() :_ Returns the least double integer value no smaller than current num.
+  
+- _truncateToDouble() :_  Returns the double integer value obtained by discarding any fractional
+     digits from the double value of `this`.
+  
+- _truncate() :_ Return int by removing fractional part of num.
+   ### More examples:
+
 ```dart
 num printHi(String input){
   print("Hi"+input.toString());
@@ -188,6 +205,35 @@ main(){
   //toInt()
   myNumber = 2323.232.toInt();
   print("toInt : "+myNumber.toString());
+  //round()
+  myNumber = 2323.232.round();
+  print("Round : "+myNumber.toString());
+  myNumber = 234.982.roundToDouble();
+  print("Round : "+myNumber.toString());
+  //floor()
+  myNumber = 2323.232.floor();
+  print("Floor : "+myNumber.toString());
+  //ceil()
+  myNumber = 2323.232.ceil();
+  print("Ceil : "+myNumber.toString());
+  //truncate()
+  myNumber = 2323.232.truncate();
+  print("Truncate : "+myNumber.toString());
+  //floorToDouble
+  myDouble = 2323.232.floorToDouble();
+  print("Floor(Double) : "+myDouble.toString());
+  //roundToDouble
+  myDouble = 2323.232.roundToDouble();
+  print("Round(Double) : "+myDouble.toString());
+  myDouble = 234.982.roundToDouble();
+  print("Round(Double) : "+myDouble.toString());
+  //ceilToDouble
+  myDouble = 2323.232.ceilToDouble();
+  print("Ceil(Double) : "+myDouble.toString());
+  //TruncateToDouble
+  myDouble = 2323.232.truncateToDouble();
+  print("Truncate(Double) : "+myDouble.toString());
+
 }
 /*Output :
 1: 9
@@ -215,6 +261,17 @@ clamp 7: 873
 clamp 8: 874
 clamp 9: 1212.2323
 toInt : 2323
+toInt : 2323
+Round : 2323
+Round : 235.0
+Floor : 2323
+Ceil : 2324
+Truncate : 2323
+Floor(Double) : 2323.0
+Round(Double) : 2323.0
+Round(Double) : 235.0
+Ceil(Double) : 2324.0
+Truncate(Double) : 2323.0
 */
 ```
 

@@ -67,4 +67,38 @@ main(){
   //toInt()
   myNumber = 2323.232.toInt();
   print("toInt : "+myNumber.toString());
+  //round()
+  myNumber = 2323.232.round();
+  print("Round : "+myNumber.toString());
+  myNumber = 234.982.roundToDouble();
+  print("Round : "+myNumber.toString());
+  //floor()
+  myNumber = 2323.232.floor();
+  print("Floor : "+myNumber.toString());
+  //ceil()
+  myNumber = 2323.232.ceil();
+  print("Ceil : "+myNumber.toString());
+  //truncate()
+  myNumber = 2323.232.truncate();
+  print("Truncate : "+myNumber.toString());
+  //floorToDouble
+  myDouble = 2323.232.floorToDouble();
+  print("Floor(Double) : "+myDouble.toString());
+  //roundToDouble
+  myDouble = 2323.232.roundToDouble();
+  print("Round(Double) : "+myDouble.toString());
+  myDouble = 234.982.roundToDouble();
+  print("Round(Double) : "+myDouble.toString());
+  //ceilToDouble
+  myDouble = 2323.232.ceilToDouble();
+  print("Ceil(Double) : "+myDouble.toString());
+  //TruncateToDouble
+  myDouble = 2323.232.truncateToDouble();
+  print("Truncate(Double) : "+myDouble.toString());
+
+
+
+
+
+
 }
