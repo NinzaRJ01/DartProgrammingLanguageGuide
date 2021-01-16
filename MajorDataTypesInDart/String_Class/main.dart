@@ -11,6 +11,15 @@ main(){
   print("Single Quote String Literal Dart : "+myStr);
   myStr = "double Quote literal";//2
   print("Double Quote String Literal Dart : "+myStr);
+  myStr ='''Multi line string in dart
+          here  go go
+          using single quotes''';
+  print(myStr);
+  myStr = """Muti line string 
+  in dart using 
+  double quotes""";
+  print(myStr);
+
 
   //Concatenation of two String using '+' operator
   myStr = "First String" +" Second String";
@@ -43,7 +52,7 @@ main(){
   /*Unhandled exception:
 RangeError (index): Invalid value: Not in inclusive range 0..11: -1
 */
-
+  // myStr[0]= 'k';//Try correcting the operator to an existing operator, or defining a '[]=' operator.
 
 
 
