@@ -136,7 +136,7 @@ once variable datatype set using var keyword it can't be changed.
     3 652
     */
     ```
-    >> <a href="">For more detail on String class in dart.</a>
+    >> <a href="./MajorDataTypesInDart/String_Class">For more detail on String class in dart.</a>
 - **Booleans** represents Boolean values true and false. <ins>The keyword bool is used to represent a Boolean literal in DART. </ins>
 
     | **Keyword** - bool |
