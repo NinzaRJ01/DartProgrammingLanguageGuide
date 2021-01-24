@@ -1,6 +1,9 @@
 #  String Class In Dart Programming Language
 - is a part of dart:core.
+
 - is an abstract class.
+  
+- implement Comparable,Pattern.
 - **String Literal :**
     ```dart
   String mystr= "my string bet. double quotes";//double quote literal
@@ -73,4 +76,75 @@
      string = 'Dart';
      string.codeUnitAt(0); // 68
      string.codeUnits;     // [68, 97, 114, 116]
+    ```
+  **Properties :**
+    - _length_ : get length of string 
+    ```dart
+    print("hiThisIsAString".length);//15
+   ```
+  - _hashCode_ : get hasCode derived from code unit of string.
+    ```dart
+    print("hashCode Prop 1 :"+"himySTr".hashCode.toString());
+    print("hashCode Prop 2 :"+"himySTr23".hashCode.toString());
+    ```
+    
+  - _isEmpty_ : return true if string is empty ,false otherwise.
+    ```dart
+    print("isEmpty 1: "+"".isEmpty.toString());//true
+    print("isEmpty 2: "+" ".isEmpty.toString());//false
+    print("isEmpty 3: "+"Hi String".isEmpty.toString());//false
+    ```
+    
+  - _isNotEmpty_ : return true if string is not empty ,false otherwise.
+    
+  - 
+   Note : You can't set these properties.
+    ```dart
+  // "histr".length =4;//main.dart:63:11: Error: The setter 'length' isn't defined for the class 'String'.  
+  ```
+#### Important Methods :
+1. stringObj._toUpperCase()_ : return an uppercase string comparable to original string.
+   **Returns :** String
+   ```dart
+    print("UpperCase 1: "+"mystr".toUpperCase());
+    print("UpperCase 2: "+"Hishds sdkjskd32".toUpperCase());
+    /*Ouput:
+    * UpperCase 1: MYSTR
+    * UpperCase 2: HISHDS SDKJSKD32
+    * */
+   ```
+2. stringObj._toLowerCase()_ : return a lower case string comparable to original string.
+   **Returns :** String
+   ```dart
+   print("LowerCase 1:"+"MY StriNg heRe".toLowerCase());
+   //LowerCase 1:my string here
+   ```
+   
+3. stringObj._toCompare()_ :
+   ```
+    * Compares this string to [other].
+   *
+   * Returns a negative value if `this` is ordered before `other`,
+   * a positive value if `this` is ordered after `other`,
+   * or zero if `this` and `other` are equivalent.
+   *
+   * The ordering is the same as the ordering of the code points at the first
+   * position where the two strings differ.
+   * If one string is a prefix of the other,
+   * then the shorter string is ordered before the longer string.
+   * If the strings have exactly the same content, they are equivalent with
+   * regard to the ordering.
+   * Ordering does not check for Unicode equivalence.
+   * The comparison is case sensitive.
+   ```
+   **Returns :** int
+   
+    Example:
+    ```dart
+    print("Compare 1: "+ "this String".compareTo("other string").toString());
+    print("Compare 2: "+ "this String".compareTo("this String").toString());
+   
+   /*Output:
+   
+   */ 
     ```

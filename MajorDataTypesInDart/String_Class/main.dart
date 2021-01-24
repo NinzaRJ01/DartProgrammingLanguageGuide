@@ -54,9 +54,32 @@ RangeError (index): Invalid value: Not in inclusive range 0..11: -1
 */
   // myStr[0]= 'k';//Try correcting the operator to an existing operator, or defining a '[]=' operator.
 
+  //length property
+  print("length Prop 1 : "+"himystringhere ".length.toString());
+  //hashCode property
+  print("hashCode Prop 1 :"+"himySTr".hashCode.toString());
+  print("hashCode Prop 2 :"+"himySTr23".hashCode.toString());
+  //Note you can't set this properties.
+  // "histr".length =4;//main.dart:63:11: Error: The setter 'length' isn't defined for the class 'String'.
+
+  //isempty
+  print("isEmpty 1: "+"".isEmpty.toString());
+  print("isEmpty 2: "+" ".isEmpty.toString());
+  print("isEmpty 3: "+"Hi String".isEmpty.toString());
 
 
 
-
-
+  //Methods --->
+    //toUpperCase
+  print("UpperCase 1: "+"mystr".toUpperCase());
+  print("UpperCase 2: "+"Hishds sdkjskd32".toUpperCase());
+    //toLowerCase
+    print("LowerCase 1:"+"MY StriNg heRe".toLowerCase());
+    //compare()
+  print("Compare 1: "+ "this String".compareTo("other string").toString());
+  print("Compare 2: "+ "this String".compareTo("this String").toString());
+  print("Compare 3: "+ "this String".compareTo("thisstring").toString());
+  print("Compare 4: "+"Z".compareTo('A').toString());
+  print("Compare 5: "+'a'.compareTo('A').toString());
+  print("Compare 6: "+'A'.compareTo('Z').toString());
 }
