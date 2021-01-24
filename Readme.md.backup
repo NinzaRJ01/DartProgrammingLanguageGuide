@@ -18,6 +18,7 @@ If you are unfamiliar with any of above terms take a slight look on this terms b
 
 ---
 First of all we gonna cover basic syntax and  topics on  of dart language like :
+
 1. Data Types
 1. How to Define A Variable
 2. Print Statement in Dart
@@ -29,9 +30,9 @@ First of all we gonna cover basic syntax and  topics on  of dart language like :
 **Before We go onto basics, let us see an hello world program in dart language**
 
 ```dart
-main(){
+   main(){
     print("Hello World");
-}
+   }
 ```
 ## 1.Different Primitive  DataTypes in Dart :
 **Before Starting :** All datatypes in dart are at base is just an object.
@@ -41,10 +42,12 @@ Value of each variable declared using these datatype is **null** by default.
 **More Remarks** : 
     
 1. <ins>Dart is statically typed language</ins> means you have to explicitly declare variable's datatype and it cannot be changed at runtime. 
+
 1. **var** keyword is used to auto declare the datatype of variable but dissimilar of _var in js_
 once variable datatype set using var keyword it can't be changed.
     
     Note : by default var assign the dynamic datatype to variable but it can be differ if you initialize the variable during declaration. 
+    
     ```dart
     var var1 ;//dynamic
     var1 = 'a';
@@ -52,7 +55,9 @@ once variable datatype set using var keyword it can't be changed.
     var var2 = 123;//int
     var2 = "fire";//Error: A value of type 'String' can't be assigned to a variable of type 'int'.
     ```
+    
 1. **dynamic** keyword which is dart object under the hood is used to dynamically assign datatype to variable it associated with.
+
     ```dart
     dynamic a = 40;
     a ='a'; //works
@@ -62,6 +67,7 @@ once variable datatype set using var keyword it can't be changed.
 
 ---
 - **Numbers** 
+
     holds the numeric value. 
     The num type is an inherited data type of the int and double types.
 
@@ -73,6 +79,7 @@ once variable datatype set using var keyword it can't be changed.
     | **int**  used  to represent integers|
     | **double** used to represent floating point values| 
     
+    ---
     - *int*
     is used to represent whole numbers values.
 
@@ -95,10 +102,12 @@ once variable datatype set using var keyword it can't be changed.
     3 -232
     */
     ```
+    
     - *double*
     is  used to represent 64-bit floating-point numbers.
 
     | **Keyword** - double | 
+    
     ```dart
     double mynum = 434.22;
     double mynum1 = -4331.233;
@@ -113,6 +122,7 @@ once variable datatype set using var keyword it can't be changed.
     3 32
     */
     ```
+    
     >> <a href="https://github.com/NinzaRJ01/DartProgrammingLanguageGuide/tree/master/MajorDataTypesInDart/Num_Class">For more detail on Number, Int, Double class and their property</a>
 
 - **Strings** is used to represent a sequence of characters. It is a sequence of UTF-16 code units. The keyword string is used to represent string literals.
@@ -120,6 +130,7 @@ once variable datatype set using var keyword it can't be changed.
     | **Keyword** - String |
     
     In dart string is represent as text between ""(double quotes) or ''(single quotes ) also known as *String Literals*.
+    
     ```dart
     String mystr = "hello";
     String mystr2 = "dart";
@@ -136,10 +147,13 @@ once variable datatype set using var keyword it can't be changed.
     3 652
     */
     ```
-    >> <a href="">For more detail on String class in dart.</a>
-- **Booleans** represents Boolean values true and false. <ins>The keyword bool is used to represent a Boolean literal in DART. </ins>
+    >> <a href="./MajorDataTypesInDart/String_Class">For more detail on String class in dart.</a>
+- **Booleans** represents Boolean values true and false. 
+
+   <ins>The keyword bool is used to represent a Boolean literal in DART. </ins>
 
     | **Keyword** - bool |
+    
     ```dart
     bool mybool = false;
     bool mybool1 = true;
@@ -153,6 +167,7 @@ once variable datatype set using var keyword it can't be changed.
     print("2 "+mybool1.toString());
     print("3 "+mybool4.toString());//null is no value is given
     ```
+    
 - **Lists (similar to Arrays)**
      is similar to arrays in other programming languages. A list is used to represent a collection of objects. It is an ordered group of objects.
 
@@ -167,10 +182,13 @@ once variable datatype set using var keyword it can't be changed.
         **Declaration Syntax :**
         
         >> List Declare using this syntax will be fixed size list.
+        
         ```dart 
         List list-name = new List(initialization_size);
         ```
-        >> Internalizing list element after declaration
+        
+        >> Intializing list element after declaration
+        
         ```dart
         List myList = new List(n);
         myList[index] = val;//index can be any value between 0 to n-1 
@@ -200,18 +218,23 @@ once variable datatype set using var keyword it can't be changed.
         Note : A list is resizable only if initialized using following syntax;
         
         Syntax1 :
+        
         ```dart
         List l = new List();//empty initialization of list using constructor with no para
         //l  is a variable-name
         ```
+        
         Syntax2 :
+        
         ```dart
         List l = [];
         //Using List literal or 
         List l = [val1,val2,...val_n];
         //l is a variable-name
         ```
+        
         First method: 
+        
         ```dart
         List myList = new List();
         myList.add(1);
@@ -222,7 +245,9 @@ once variable datatype set using var keyword it can't be changed.
         myList.add(true);
         //i won't recommend this if input value need to be changed after initialization.
         ```
+        
         Second method:
+        
         ```dart
         List myList2 = ['a','b','c'];//resize the existing list
         myList2.add(4);
@@ -234,7 +259,9 @@ once variable datatype set using var keyword it can't be changed.
         */
         myList2[4] ="five";//This generate out of index error. 
         ```
+        
         More Examples :
+        
         ```dart
          List myList = new List(6);
         for(int i=0;i<6;i++){
@@ -257,7 +284,9 @@ once variable datatype set using var keyword it can't be changed.
         [5]
         */
         ```
+        
         **Fixed Size List vs Resizable List**
+        
         ```dart
         List l = new List(2);//Fixed Size List
         l[0]=2;
@@ -268,13 +297,16 @@ once variable datatype set using var keyword it can't be changed.
         p.add(2);//No problem
 
         ```
+        
     >> <a href=" ">For More Detail about List class in dart</a>
+    
 - **Maps** 
-object is a key and value pair. Keys and values on a map may be of any type. It is a dynamic collection. 
+    object is a key and value pair. Keys and values on a map may be of any type. It is a dynamic collection. 
 
     | **Keyword** - Map |
     
     **Syntax :**
+    
     ```dart
     Map myMap = new Map();
     myMap[key1] =val1;
@@ -287,6 +319,7 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
     ```
     
     Example :
+    
     ```dart
     Map obj = new Map();
     obj["mykey"] ="myVal";//String as key
@@ -340,6 +373,7 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
     ```bash
     dart compile <sub-command> <dart-file>
     ```
+    
     **Sub-Commands :**
 
     |sub-commands | overview |
@@ -348,16 +382,18 @@ object is a key and value pair. Keys and values on a map may be of any type. It 
     |exe |           Compile Dart to a self-contained executable.|
     |jit-snapshot |  Compile Dart to a JIT snapshot.|
     |js            | Compile Dart to JavaScript.|
-    |kernel        |Compile Dart to a kernel snapshot. |
+    |kernel        |Compile Dart to a kernel snapshot|
 
     **Example (for binary system executable) :**
 
     - Creating 
 
-    ```bash
-    dart compile exe main.dart
-    ```
-    Running (in linux env)    
+       ```bash
+       dart compile exe main.dart
+       ```
+    
+    - Running (in linux env)  
+      
     ```bash
     ./main.exe
     ```
