@@ -75,11 +75,26 @@ RangeError (index): Invalid value: Not in inclusive range 0..11: -1
   print("UpperCase 2: "+"Hishds sdkjskd32".toUpperCase());
     //toLowerCase
     print("LowerCase 1:"+"MY StriNg heRe".toLowerCase());
-    //compare()
+    //compareTo()
   print("Compare 1: "+ "this String".compareTo("other string").toString());
   print("Compare 2: "+ "this String".compareTo("this String").toString());
   print("Compare 3: "+ "this String".compareTo("thisstring").toString());
   print("Compare 4: "+"Z".compareTo('A').toString());
   print("Compare 5: "+'a'.compareTo('A').toString());
   print("Compare 6: "+'A'.compareTo('Z').toString());
+    //indexOf
+  print("Index Of 1: : "+ "hi i hate to use regex".indexOf("hate").toString());
+  print("Index Of 2: : "+ "hi i hate to use use regex".indexOf("use").toString());
+  print("Index Of 3: : "+ "hi i hate to use use use regex".indexOf("use").toString());
+  print("Index Of 4: : "+ "hi i hate to  regex".indexOf("use").toString());
+  print("Index Of 5: : "+ "hi i hate touse regex".indexOf("use").toString());
+  //Note : pattern here isn't a pattern obj or regex
+  print("Index Of 6: : "+ "hi i hate touse use regex".indexOf("\suse").toString());
+  print("Index Of 7: : "+ "hi i hate to use use986 regex".indexOf("\\suse\\s").toString());
+      //using **start** argument
+  print("Index Of : : "+ "hi i hate to use use regex".indexOf("use",14).toString());
+  // print("Index Of : : "+ "hi i hate to use use regex".indexOf("use",-3).toString());
+  //RangeError (start): Invalid value: Not in inclusive range 0..26: -3
+
+
 }
