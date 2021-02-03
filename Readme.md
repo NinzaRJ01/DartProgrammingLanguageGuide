@@ -83,45 +83,45 @@ once variable datatype set using var keyword it can't be changed.
     - *int*
     is used to represent whole numbers values.
 
-    | **Keyword** - int |
+      | **Keyword** - int |
     
-    ```dart
-    int mynum = 4;
-    int mynum2 = 9999;
-    int mynum3 = -232;
-    //below code will give an error
-    int mynum4 = 33.34;//Error: A value of type 'double' can't be assigned to a variable of type 'int'.
+      ```dart
+      int mynum = 4;
+      int mynum2 = 9999;
+      int mynum3 = -232;
+      //below code will give an error
+      int mynum4 = 33.34;//Error: A value of type 'double' can't be assigned to a variable of type 'int'.
     
-    //Note : Sometime you may need to convert int to string datatype at this you may use toString method in-built to num object.
-    print("1 "+ mynum.toString());
-    print("2 "+ mynum2.toString());
-    print("3 "+ mynum3.toString());
-    /*Output :
-    1 4
-    2 9999
-    3 -232
-    */
-    ```
+      //Note : Sometime you may need to convert int to string datatype at this you may use toString method in-built to num object.
+      print("1 "+ mynum.toString());
+      print("2 "+ mynum2.toString());
+      print("3 "+ mynum3.toString());
+      /*Output :
+      1 4
+      2 9999
+      3 -232
+      */
+      ```
     
     - *double*
     is  used to represent 64-bit floating-point numbers.
 
-    | **Keyword** - double | 
+      | **Keyword** - double | 
     
-    ```dart
-    double mynum = 434.22;
-    double mynum1 = -4331.233;
-    double mynum2 = 32;
-    //Note : Sometime you may need to convert double to string datatype at this you may use toString method in-built to num object.
-    print("1 "+ mynum.toString());
-    print("2 "+ mynum1.toString());
-    print("3 "+ mynum2.toString());
-    /*Output:
-    1 434.22
-    2 -4331.233
-    3 32
-    */
-    ```
+      ```dart
+      double mynum = 434.22;
+      double mynum1 = -4331.233;
+      double mynum2 = 32;
+      //Note : Sometime you may need to convert double to string datatype at this you may use toString method in-built to num object.
+      print("1 "+ mynum.toString());
+      print("2 "+ mynum1.toString());
+      print("3 "+ mynum2.toString());
+      /*Output:
+      1 434.22
+      2 -4331.233
+      3 32
+      */
+      ```
     
     >> <a href="https://github.com/NinzaRJ01/DartProgrammingLanguageGuide/tree/master/MajorDataTypesInDart/Num_Class">For more detail on Number, Int, Double class and their property</a>
 
@@ -129,26 +129,28 @@ once variable datatype set using var keyword it can't be changed.
 
     | **Keyword** - String |
     
-    In dart string is represent as text between ""(double quotes) or ''(single quotes ) also known as *String Literals*.
+    - In dart string is represent as text between ""(double quotes) or ''(single quotes ) also known as *String Literals*.
     
-    ```dart
-    String mystr = "hello";
-    String mystr2 = "dart";
-    String mystr3 = "652";
-    String mystr4 = 54;
-    //Error: A value of type 'int' can't be assigned to a variable of type 'String'
-    //String mystr4 = 54; 
-    print("1 "+mystr);
-    print("2 "+mystr2);
-    print("3 "+mystr3);
-    /*Output
-    1 hello
-    2 dart
-    3 652
-    */
-    ```
+       ```dart
+       String mystr = "hello";
+       String mystr2 = "dart";
+       String mystr3 = "652";
+       String mystr4 = 54;
+       //Error: A value of type 'int' can't be assigned to a variable of type 'String'
+       //String mystr4 = 54; 
+       print("1 "+mystr);
+       print("2 "+mystr2);
+       print("3 "+mystr3);
+       /*Output
+       1 hello
+       2 dart
+       3 652
+       */
+       ```
     >> <a href="./MajorDataTypesInDart/String_Class">For more detail on String class in dart.</a>
-- **Booleans** represents Boolean values true and false. 
+- **Booleans** 
+
+   represents Boolean values true and false. 
 
    <ins>The keyword bool is used to represent a Boolean literal in DART. </ins>
 
@@ -308,60 +310,60 @@ once variable datatype set using var keyword it can't be changed.
 
     | **Keyword** - Map |
     
-    **Syntax :**
+    - **Syntax :**
     
-     ```dart
-     Map myMap = new Map();
-     myMap[key1] =val1;
-     myMap[key2] =val2;
-     myMap[key3] =val3;
-     ....
-     myMap[key_n] =val_n;
-     //val1,val2,val3...val_n can be of any datatypes,  objects etc.
-     //key1,key2,key3...key_n can be of any datatypes,objects etc.
-     ```
+       ```dart
+       Map myMap = new Map();
+       myMap[key1] =val1;
+       myMap[key2] =val2;
+       myMap[key3] =val3;
+       ....
+       myMap[key_n] =val_n;
+       //val1,val2,val3...val_n can be of any datatypes,  objects etc.
+       //key1,key2,key3...key_n can be of any datatypes,objects etc.
+       ```
     
-    Example :
+   - Example :
     
-     ```dart
-     Map obj = new Map();
-     obj["mykey"] ="myVal";//String as key
+       ```dart
+       Map obj = new Map();
+       obj["mykey"] ="myVal";//String as key
       List l = [1,2,3];//list
-     obj[l] ="list as key";//list as key
-     obj[true] =false;//boolean value as key
-     obj[23] =43;//integer value as key
-     print(obj["mykey"]);
-     print(obj[l]);
-     print(obj[true]);
-     print(obj[23]);
-     /*Output :
-     myVal
-     list as key
-     */
-     ```
-    >>> Note  while using list or any other object as key that it will take the _reference of obj_ as key not the value of object itself.
+       obj[l] ="list as key";//list as key
+       obj[true] =false;//boolean value as key
+       obj[23] =43;//integer value as key
+       print(obj["mykey"]);
+       print(obj[l]);
+       print(obj[true]);
+       print(obj[23]);
+       /*Output :
+       myVal
+       list as key
+       */
+       ```
+    >>> **Note**  while using list or any other object as key that it will take the _reference of obj_ as key not the value of object itself.
 
-    Example :
+    - Example :
  
-     ```dart
-     Map myMap = new Map();
-     List l = [1,2,3];//list
-     obj[l] ="List as key";
-     print("Before : "+ obj[l]);
-     l[1] = 4;//changes
-     print("After  : "+obj[l]);//same result 
-    /*Output  
-     Before :   List as key
-     After  : List as key
-      */
-     //More 
-     obj[[5,6,7]]= "Another One";
-     print(obj[[5,6,7]]);
-     //and also
-     print(obj[[1,2,3]]);
-     //since l is reference to object of List which is  new for each list 
-     print([1,2,3]==l);//Example
-     ```
+       ```dart
+       Map myMap = new Map();
+       List l = [1,2,3];//list
+       obj[l] ="List as key";
+       print("Before : "+ obj[l]);
+       l[1] = 4;//changes
+       print("After  : "+obj[l]);//same result 
+      /*Output  
+       Before :   List as key
+       After  : List as key
+        */
+       //More 
+       obj[[5,6,7]]= "Another One";
+       print(obj[[5,6,7]]);
+       //and also
+       print(obj[[1,2,3]]);
+       //since l is reference to object of List which is  new for each list 
+       print([1,2,3]==l);//Example
+       ```
 
     >><a href=" ">For More Detail about Map class in dart</a>
 
