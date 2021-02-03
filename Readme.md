@@ -180,128 +180,128 @@ once variable datatype set using var keyword it can't be changed.
      
         In this type of list, length can't change at runtime.
 
-        **Declaration Syntax :**
+        - **Declaration Syntax :**
         
-        >> List Declare using this syntax will be fixed size list.
+          >> List Declare using this syntax will be fixed size list.
         
-         ```dart 
-         List list-name = new List(initialization_size);
-         ```
+           ```dart 
+          List list-name = new List(initialization_size);
+          ```
         
-        >> Intializing list element after declaration
+          >> Intializing list element after declaration
         
-         ```dart
-         List myList = new List(n);
-         myList[index] = val;//index can be any value between 0 to n-1 
-         ```
-         
-        **Example of Nested Lists :-**
+          ```dart
+          List myList = new List(n);
+          myList[index] = val;//index can be any value between 0 to n-1 
+          ```
+
+        - **Example of Nested Lists :-**
         
-         ```dart
-         List myList = new List(6);
-         for(int i=0;i<6;i++){
-         myList[i]= "hello "+i.toString();
-         }
-         List myList2 = ["one",2,"three"];
-         List myList3 =[myList,myList2];
-         print(myList);
-         print(myList2);
-         print(myList3);
+          ```dart
+          List myList = new List(6);
+          for(int i=0;i<6;i++){
+          myList[i]= "hello "+i.toString();
+          }
+          List myList2 = ["one",2,"three"];
+          List myList3 =[myList,myList2];
+          print(myList);
+          print(myList2);
+          print(myList3);
         
-         /* Output :
-         [hello 0, hello 1, hello 2, hello 3, hello 4, hello 5]
-         [one, 2, three]
-         [[hello 0, hello 1, hello 2, hello 3, hello 4,  hello 5], [one, 2, three]]   
-         */
-         ```
+          /* Output :
+          [hello 0, hello 1, hello 2, hello 3, hello 4, hello 5]
+          [one, 2, three]
+          [[hello 0, hello 1, hello 2, hello 3, hello 4,  hello 5], [one, 2, three]]   
+          */
+          ```
 
      - **Resizable List**
 
          ->Syntax is  same as of Fixed List but you can add more element, change the length of current List object via **add()** method.
          Note : A list is resizable only if initialized using following syntax;
         
-         Syntax1 :
+         - Syntax1 :
 
-         ```dart
-         List l = new List();//empty initialization of list using constructor with no para
-         //l  is a variable-name
-         ```
+           ```dart
+           List l = new List();//empty initialization of list using constructor with no para
+           //l  is a variable-name
+           ```
         
-         Syntax2 :
+         - Syntax2 :
         
-         ```dart
-         List l = [];
-         //Using List literal or 
-         List l = [val1,val2,...val_n];
-         //l is a variable-name
-         ```
+           ```dart
+           List l = [];
+           //Using List literal or 
+           List l = [val1,val2,...val_n];
+           //l is a variable-name
+           ```
         
-        First method: 
+        - First method: 
         
-         ```dart
-         List myList = new List();
-         myList.add(1);
-         myList.add(2);
-         myList.add(3);
-         myList.add("hy");
-         myList.add("true");
-         myList.add(true);
-         //i won't recommend this if input value need to be changed after initialization.
-         ```
+           ```dart
+           List myList = new List();
+           myList.add(1);
+           myList.add(2);
+           myList.add(3);
+            myList.add("hy");
+            myList.add("true");
+           myList.add(true);
+           //i won't recommend this if input value need to be changed after initialization.
+           ```
         
-        Second method:
+        - Second method:
         
-         ```dart
-         List myList2 = ['a','b','c'];//resize the existing list
-         myList2.add(4);
-         print(myList);
-         print(myList2);
-         /*Output
-         [1, 2, 3, hy, true, true]
-         [a, b, c, 4]
-         */
-         myList2[4] ="five";//This generate out of index error. 
-         ```
+           ```dart
+           List myList2 = ['a','b','c'];//resize the existing list
+           myList2.add(4);
+           print(myList);
+           print(myList2);
+           /*Output
+           [1, 2, 3, hy, true, true]
+           [a, b, c, 4]
+           */
+           myList2[4] ="five";//This generate out of index error. 
+           ```
         
-        More Examples :
+        - More Examples :
         
-         ```dart
-          List myList = new List(6);
-         for(int i=0;i<6;i++){
-         myList[i]= "hello "+i.toString();
-         }
-         List myList2 = ["one",2,"three"];
-         myList2.add(3);
-          List myList3 =[myList,myList2];
-         var myList4 = new List();
-         myList4.add(5);
-         //   myList3[2]=5;
-         print(myList);
-         print(myList2);
-           print(myList3);
-         print(myList4);
-         /*Output
-         [hello 0, hello 1, hello 2, hello 3, hello 4,  hello 5]
-         [one, 2, three, 3]
-         [[hello 0, hello 1, hello 2, hello 3, hello 4,  hello 5], [one, 2, three, 3]]
-        [5]
-         */
-         ```
+           ```dart
+            List myList = new List(6);
+           for(int i=0;i<6;i++){
+           myList[i]= "hello "+i.toString();
+           }
+           List myList2 = ["one",2,"three"];
+           myList2.add(3);
+             List myList3 =[myList,myList2];
+           var myList4 = new List();
+           myList4.add(5);
+           //   myList3[2]=5;
+           print(myList);
+           print(myList2);
+             print(myList3);
+           print(myList4);
+           /*Output
+           [hello 0, hello 1, hello 2, hello 3, hello 4,  hello 5]
+           [one, 2, three, 3]
+           [[hello 0, hello 1, hello 2, hello 3, hello 4,  hello 5], [one, 2, three, 3]]
+           [5]
+           */
+           ```
         
-        **Fixed Size List vs Resizable List**
+        - **Fixed Size List vs Resizable List**
         
-         ```dart
-         List l = new List(2);//Fixed Size List
-         l[0]=2;
-         l.add(1);//It will Throw
-         //Unsupported operation: addError: Unsupported  operation: add
-         print(l);
-         List p = new List();
-         p.add(2);//No problem
-
-         ```
-        
-    >> <a href=" ">For More Detail about List class in dart</a>
+           ```dart
+            List l = new List(2);//Fixed Size List
+           l[0]=2;
+           l.add(1);//It will Throw
+           //Unsupported operation: addError: Unsupported  operation: add
+           print(l);
+            List p = new List();
+           p.add(2);//No problem
+  
+          ```
+         
+     >> <a href=" ">For More Detail about List class in  dart</a>
     
 - **Maps** 
     object is a key and value pair. Keys and values on a map may be of any type. It is a dynamic collection. 
