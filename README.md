@@ -8,7 +8,7 @@
 ---
 **Links :**
 
-<a href="https://ninzarj01.github.io/DartProgrammingLanguageGuide/" style="text-align: center;"><img src="./img_resources/docsify_logo.png" height="4%" width="15%"> <br>Docsified WebPage Of Guide</a>
+<a href="https://ninzarj01.github.io/DartProgrammingLanguageGuide/" style="text-align: center;"><img src="./img_resources/docsify_logo.png" height="4%" width="15%"> <br>Docsified WebPages Of Guide</a>
 
 ---
 
