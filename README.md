@@ -1,5 +1,6 @@
-<h1 align ="center"> <img src="./img_resources/dart_log.png" height="10%" width ="10%"> Dart Programming Fast and Simple Guide </h1>
+ <img src="./img_resources/dart_log.png" height="10%" width ="10%">  
 
+# Dart Programming Fast and Simple Guide
 *This Guide is for those, who were/are already familiar to programming and have desire to learn dart also for various purposes.*
 
 ![](./gif_resources/hello_dart.gif)
@@ -66,22 +67,24 @@ once variable datatype set using var keyword it can't be changed.
     ```
 
 ---
-- **Numbers** 
+- ### **Numbers** 
 
     holds the numeric value. 
     The num type is an inherited data type of the int and double types.
 
-    | **Keyword** - num |
+   | **Keyword** - num |
 
 
-    |Number in dart can further classified as:|
-    |------------------|
-    | **int**  used  to represent integers|
-    | **double** used to represent floating point values| 
-    
-    ---
-    - *int*
-    is used to represent whole numbers values.
+   |Number in dart can further classified as:|
+   |------------------|
+   | **int**  used  to represent integers|
+   | **double** used to represent floating point values| 
+
+   ---
+
+   - #### *int*
+
+     is used to represent whole numbers values.
 
       | **Keyword** - int |
     
@@ -103,7 +106,7 @@ once variable datatype set using var keyword it can't be changed.
       */
       ```
     
-    - *double*
+   - #### *double*
     is  used to represent 64-bit floating-point numbers.
 
       | **Keyword** - double | 
@@ -125,7 +128,8 @@ once variable datatype set using var keyword it can't be changed.
     
     >> <a href="https://github.com/NinzaRJ01/DartProgrammingLanguageGuide/tree/master/MajorDataTypesInDart/Num_Class">For more detail on Number, Int, Double class and their property</a>
 
-- **Strings** is used to represent a sequence of characters. It is a sequence of UTF-16 code units. The keyword string is used to represent string literals.
+- ### **Strings**
+    is used to represent a sequence of characters. It is a sequence of UTF-16 code units. The keyword string is used to represent string literals.
 
     | **Keyword** - String |
     
@@ -148,11 +152,12 @@ once variable datatype set using var keyword it can't be changed.
        */
        ```
     >> <a href="./MajorDataTypesInDart/String_Class">For more detail on String class in dart.</a>
-- **Booleans** 
+
+- ### **Booleans** 
 
    represents Boolean values true and false. 
 
-   <ins>The keyword bool is used to represent a Boolean literal in DART. </ins>
+   <ins>The keyword **bool** is used to represent a Boolean literal in DART. </ins>
 
     | **Keyword** - bool |
     
@@ -170,7 +175,7 @@ once variable datatype set using var keyword it can't be changed.
     print("3 "+mybool4.toString());//null is no value is given
     ```
     
-- **Lists (similar to Arrays)**
+- ### **Lists (similar to Arrays)**
 
      is similar to arrays in other programming languages. A list is used to represent a collection of objects. It is an ordered group of objects.
 
@@ -178,7 +183,7 @@ once variable datatype set using var keyword it can't be changed.
 
      *Remarks* : . The <ins>dart:core library</ins> provides the List class that enables creation and manipulation of lists.
      
-     - **Fixed Sized List**
+     - #### **Fixed Sized List**
      
         In this type of list, length can't change at runtime.
 
@@ -217,7 +222,7 @@ once variable datatype set using var keyword it can't be changed.
           */
           ```
 
-     - **Resizable List**
+     - #### **Resizable List**
 
          ->Syntax is  same as of Fixed List but you can add more element, change the length of current List object via **add()** method.
          Note : A list is resizable only if initialized using following syntax;
@@ -290,7 +295,7 @@ once variable datatype set using var keyword it can't be changed.
            */
            ```
         
-        - **Fixed Size List vs Resizable List**
+        - #### **Fixed Size List vs Resizable List**
         
            ```dart
             List l = new List(2);//Fixed Size List
@@ -305,7 +310,7 @@ once variable datatype set using var keyword it can't be changed.
          
      >> <a href=" ">For More Detail about List class in  dart</a>
     
-- **Maps** 
+- ### **Maps** 
     object is a key and value pair. Keys and values on a map may be of any type. It is a dynamic collection. 
 
     | **Keyword** - Map |
@@ -370,7 +375,7 @@ once variable datatype set using var keyword it can't be changed.
 
 ><h3 align="center">More About Dart</h3>
 
- - **Is dart an Interpreted or a Compiled Language ?** 
+ - ### **Is dart an Interpreted or a Compiled Language ?** 
 
     Actually, it can be both interpreted and compiled. Yes, it provides functionality for _ahead of time_ (AOT) compilation used primarily in **production code**  and also  for _just in time_ compilation which is beneficial while **developing code**.
 
@@ -379,7 +384,7 @@ once variable datatype set using var keyword it can't be changed.
     dart compile <sub-command> <dart-file>
     ```
     
-    **Sub-Commands :**
+    #### **Sub-Commands :**
 
     |sub-commands | overview |
     |-------------|----------|
