@@ -4,7 +4,7 @@
 - is an abstract class.
   
 - implement Comparable,Pattern.
-- **String Literal :**
+- ## **String Literal**
     ```dart
   String mystr= "my string bet. double quotes";//double quote literal
   mystr = 'my string bet. single quotes.'//single quote literal
@@ -32,7 +32,7 @@
     he
     ''';
     ```
-- **Concatenation in String Using '+' Opeartor:**
+- ## **Concatenation in String Using '+' Opeartor**
 
     Example :
     ```dart
@@ -43,7 +43,7 @@
   */  
   ```
   
-#### Remarks :
+## Remarks 
 - You can access the string's singular element/character using 
     following syntax :
   ```dart
@@ -77,33 +77,48 @@
      string.codeUnitAt(0); // 68
      string.codeUnits;     // [68, 97, 114, 116]
     ```
-  **Properties :**
-    - _length_ : get length of string 
+##  **Properties**
+
+  - ### _length_ : 
+    
+    get length of string 
+
     ```dart
     print("hiThisIsAString".length);//15
-   ```
-  - _hashCode_ : get hasCode derived from code unit of string.
+    ```
+
+  - ### _hashCode_ : 
+  
+    get hasCode derived from code unit of string.
+    
     ```dart
     print("hashCode Prop 1 :"+"himySTr".hashCode.toString());
     print("hashCode Prop 2 :"+"himySTr23".hashCode.toString());
     ```
     
-  - _isEmpty_ : return true if string is empty ,false otherwise.
+  - ### _isEmpty_ : 
+  return true if string is empty ,false otherwise.
     ```dart
     print("isEmpty 1: "+"".isEmpty.toString());//true
     print("isEmpty 2: "+" ".isEmpty.toString());//false
     print("isEmpty 3: "+"Hi String".isEmpty.toString());//false
     ```
     
-  - _isNotEmpty_ : return true if string is not empty ,false otherwise.
+  - ### _isNotEmpty_ : 
+  return true if string is not empty ,false otherwise.
     
-  - 
-   Note : You can't set these properties.
-    ```dart
-  // "histr".length =4;//main.dart:63:11: Error: The setter 'length' isn't defined for the class 'String'.  
+  - ### Note :
+   You can't set these properties.
+
+  ```dart
+  "histr".length =4;
+  //main.dart:63:11: Error: The setter 'length' isn't defined for the class 'String'.  
   ```
-#### Important Methods :
-1. stringObj._toUpperCase()_ : return an uppercase string comparable to original string.
+## **Important Methods**
+
+### 1. stringObj._toUpperCase()_ 
+: return an uppercase string comparable to original string.
+
    **Returns :** String
    ```dart
     print("UpperCase 1: "+"mystr".toUpperCase());
@@ -113,14 +128,16 @@
     * UpperCase 2: HISHDS SDKJSKD32
     * */
    ```
-2. stringObj._toLowerCase()_ : return a lower case string comparable to original string.
+### 2. stringObj._toLowerCase()_ 
+: return a lower case string comparable to original string.
    **Returns :** String
    ```dart
    print("LowerCase 1:"+"MY StriNg heRe".toLowerCase());
    //LowerCase 1:my string here
    ```
    
-3. stringObj._toCompare()_ :
+### 3. stringObj._toCompare()_ 
+
    ```
     * Compares this string to [other].
    *
@@ -139,31 +156,33 @@
    ```
    **Returns :** int
    
-    Example:
-    ```dart
+  Example:
+
+  ```dart
     print("Compare 1: "+ "this String".compareTo("other string").toString());
     print("Compare 2: "+ "this String".compareTo("this String").toString());
     print("Compare 3: "+ "this String".compareTo("thisstring").toString());
     print("Compare 4: "+"Z".compareTo('A').toString());
     print("Compare 5: "+'a'.compareTo('A').toString());
     print("Compare 6: "+'A'.compareTo('Z').toString());
-   /*Output:
+    /*Output:
     Compare 1: 1
     Compare 2: 0
     Compare 3: -1
     Compare 4: 1
     Compare 5: 1
     Compare 6: -1
-   */ 
-    ```
+    */ 
+  ```
    
-4. stringObj._indexOf(String pattern,int start) :_
+### 4. stringObj._indexOf(String pattern,int start) :_
     
-    used to find the starting index of given string inside stringObject which matches
+  used to find the starting index of given string inside stringObject which matches
      the pattern.
    
    **Returns**: int
-    ```dart
+
+  ```dart
     print("Index Of 1: : "+ "hi i hate to use regex".indexOf("hate").toString());
     print("Index Of 2: : "+ "hi i hate to use use regex".indexOf("use").toString());
     print("Index Of 3: : "+ "hi i hate to use use use regex".indexOf("use").toString());
@@ -177,10 +196,10 @@
     // print("Index Of : : "+ "hi i hate to use use regex".indexOf("use",-3).toString());
     //RangeError (start): Invalid value: Not in inclusive range 0..26: -3
 
-    ```
+  ```
 
-5. stringObj._subString(int start,int end) :_
- returns substring of str-object from start index to end index -1.
+### 5. stringObj._subString(int start,int end)_
+  : returns substring of str-object from start index to end index -1.
    
-    **Returns :** string 
+  **Returns :** string 
    

@@ -1,21 +1,25 @@
 ## Num Class in Dart Programming Language
   
   - num is an _abstract class_ in dart
+
   - num class can't create objects of its own.
   
   ```dart
     num myNum = new num();//Error: The class 'num' is abstract and can't be instantiated
   ```
-  - Well Known SubClasses : 
-   **int** , **double**
+  - ### Well Known SubClasses 
+    
+    | **int** | **double** |
+    |---------|------------|
+
+
   - It gives a compile-time error for any type other than [int] or [double]   
   - can hold/represent int or double datatype . 
    
 Most its methods are <ins>abstract method</ins> (methods which need to be overridden in subclasses ).
 
-But in the later version of dart sdk, it has the two **static method** named :
-    
-   **(**imp)**
+  ### Important Methods    
+   
    1. __parse(String input,[@deprecated num onError(String input)?])__  : 
    
       - Parses a string containing a number literal into a number.
@@ -173,7 +177,7 @@ But in the later version of dart sdk, it has the two **static method** named :
   print("Truncate : "+myNumber.toString());
 
   ```
-   ### More examples:
+   ### Code Example
 
 ```dart
 num printHi(String input){
