@@ -5,6 +5,7 @@
   
 - implement Comparable,Pattern.
 - ## **String Literal**
+  
     ```dart
   String mystr= "my string bet. double quotes";//double quote literal
   mystr = 'my string bet. single quotes.'//single quote literal
@@ -12,7 +13,9 @@
 - implements Comparable,Pattern
 - You can use **$**
   to interpolate the value of Dart expressions within strings.
+  
   Example :
+  
   ```dart
   var mystr = "Hello ${12/4}";//if single back slash'\' is showning before $ ignore it
   //it will be due Readme formating    
@@ -23,6 +26,7 @@
   ```
 - multiline string literal.
   Example :
+  
     ```dart
     String s= """multi line 
               string
@@ -35,6 +39,7 @@
 - ## **Concatenation in String Using '+' Opeartor**
 
     Example :
+  
     ```dart
   var myStr ="first string"+" second string"+"third string";
   print(myStr);
@@ -46,10 +51,12 @@
 ## Remarks 
 - You can access the string's singular element/character using 
     following syntax :
+  
   ```dart
   mystr[i];//i be the index of element between 0(the first index) and length of string
   ```
   Example:
+  
     ```dart
   myStr = "Hello String";
   print("myStr[0] : "+myStr[0]);
@@ -72,6 +79,7 @@
   ```
 - A string is represented by a sequence of Unicode UTF-16 code units
  accessible through the [codeUnitAt] or the [codeUnits] members:
+  
     ```dart
      string = 'Dart';
      string.codeUnitAt(0); // 68
@@ -98,6 +106,7 @@
     
   - ### _isEmpty_ : 
   return true if string is empty ,false otherwise.
+
     ```dart
     print("isEmpty 1: "+"".isEmpty.toString());//true
     print("isEmpty 2: "+" ".isEmpty.toString());//false
@@ -119,7 +128,8 @@
 ### 1. stringObj._toUpperCase()_ 
 : return an uppercase string comparable to original string.
 
-   **Returns :** String
+   **Return Type:** String
+
    ```dart
     print("UpperCase 1: "+"mystr".toUpperCase());
     print("UpperCase 2: "+"Hishds sdkjskd32".toUpperCase());
@@ -130,7 +140,7 @@
    ```
 ### 2. stringObj._toLowerCase()_ 
 : return a lower case string comparable to original string.
-   **Returns :** String
+   **Return Type:** String
    ```dart
    print("LowerCase 1:"+"MY StriNg heRe".toLowerCase());
    //LowerCase 1:my string here
@@ -154,7 +164,7 @@
    * Ordering does not check for Unicode equivalence.
    * The comparison is case sensitive.
    ```
-   **Returns :** int
+   **Return Type:** int
    
   Example:
 
@@ -180,7 +190,7 @@
   used to find the starting index of given string inside stringObject which matches
      the pattern.
    
-   **Returns**: int
+   **Return Type**: int
 
   ```dart
     print("Index Of 1: \"hi i hate to use regex\".indexOf(\"hate\") : "+ "hi i hate to use regex".indexOf("hate").toString());
@@ -210,7 +220,8 @@
 ### 5. stringObj._substring(int start,int end)_
   : returns substring of str-object from start index to end index -1.
    
-  **Returns :** string
+  **Return Type :** string
+
   ```dart
   //substring(start[,end])
   //setting start only
@@ -227,5 +238,27 @@
   substring 3: "1234567890AString Containing Numerical Characters".substring(10) :AString Co
   substring 5: "hi its there".substring(2,8):  its t
   * */
-```
+  ```
+
+### 6. stringObj._replaceAll(Pattern form,String replace)_
+   : returns a string which replaces all matches of form found in String Object
+   with replace string.
+
+   **Return Type :** string 
+    
+   ```dart
+   //replace(pattern,replace)
+    //pattern - dtype Pattern
+    //replace - dtype String
+    print("replaceAll 1 : : "+"hi hi hi hi".replaceAll("hi","hey"));
+    print("replaceAll 2 : : "+ "hi di gi ri".replaceAll(RegExp('[a-z]i'),"ho"));
+    print("replaceAll 3 : : "+"hi gi di ri".replaceAll(" ","-"));
+    print("replaceAll 4 : : "+"hi gi di ri".replaceAll("","-"));
+   /*Ouput:
+   * replaceAll 1 : : hey hey hey hey
+    replaceAll 2 : : ho ho ho ho  
+    replaceAll 3 : : hi-gi-di-ri
+    replaceAll 4 : : -h-i- -g-i- -d-i- -r-i-
+   * */
+   ```
    

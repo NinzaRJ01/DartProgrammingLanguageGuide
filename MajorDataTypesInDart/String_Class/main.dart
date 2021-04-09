@@ -82,14 +82,14 @@ RangeError (index): Invalid value: Not in inclusive range 0..11: -1
   print("Compare 4: "+"Z".compareTo('A').toString());
   print("Compare 5: "+'a'.compareTo('A').toString());
   print("Compare 6: "+'A'.compareTo('Z').toString());
-    //indexOf
+    //indexOf(pattern)
   print("Index Of 1: \"hi i hate to use regex\".indexOf(\"hate\") : "+ "hi i hate to use regex".indexOf("hate").toString());
   print("Index Of 2: \"hi i hate to use use regex\".indexOf(\"use\"): "+ "hi i hate to use use regex".indexOf("use").toString());
   print("Index Of 3: \"hi i hate to use use use regex\".indexOf(\"use\"): "+ "hi i hate to use use use regex".indexOf("use").toString());
   print("Index Of 4: "+ "hi i hate to  regex\".indexOf(\"use\") : "+ "hi i hate to  regex".indexOf("use").toString());
   print("Index Of 5: \"hi i hate touse regex\".indexOf(\"use\") : "+ "hi i hate touse regex".indexOf("use").toString());
   //Note : pattern here isn't a pattern obj or regex
-  print("Index Of 6: \"hi i hate touse use regex\".indexOf(\"\\suse\"): "+ "hi i hate touse use regex".indexOf("\\suse").toString());
+  print("Index Of 6: \"hi i hate touse use regex\".indexOf(RegExp(\"[a-z]+use\"): "+ "hi i hate touse use regex".indexOf(RegExp("[a-z]+use")).toString());
   print("Index Of 7: : "+ "hi i hate to use use986 regex".indexOf("\\suse\\s").toString());
       //using **start** argument
   print("Index Of : : "+ "hi i hate to use use regex".indexOf("use",14).toString());
@@ -106,5 +106,11 @@ RangeError (index): Invalid value: Not in inclusive range 0..11: -1
   print("substring 5: \"hi its there\".substring(2,8): "+ "hi its there".substring(2,8));
   // '\' is an escape symbol
 
-  //
+  //replace(pattern,replace)
+      //pattern - dtype Pattern
+      //replace - dtype String
+  print("replaceAll 1 : : "+"hi hi hi hi".replaceAll("hi","hey"));
+  print("replaceAll 2 : : "+ "hi di gi ri".replaceAll(RegExp('[a-z]i'),"ho"));
+  print("replaceAll 3 : : "+"hi gi di ri".replaceAll(" ","-"));
+  print("replaceAll 4 : : "+"hi gi di ri".replaceAll("","-"));
 }
