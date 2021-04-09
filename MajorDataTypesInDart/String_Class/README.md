@@ -183,23 +183,49 @@
    **Returns**: int
 
   ```dart
-    print("Index Of 1: : "+ "hi i hate to use regex".indexOf("hate").toString());
-    print("Index Of 2: : "+ "hi i hate to use use regex".indexOf("use").toString());
-    print("Index Of 3: : "+ "hi i hate to use use use regex".indexOf("use").toString());
-    print("Index Of 4: : "+ "hi i hate to  regex".indexOf("use").toString());
-    print("Index Of 5: : "+ "hi i hate touse regex".indexOf("use").toString());
+    print("Index Of 1: \"hi i hate to use regex\".indexOf(\"hate\") : "+ "hi i hate to use regex".indexOf("hate").toString());
+    print("Index Of 2: \"hi i hate to use use regex\".indexOf(\"use\"): "+ "hi i hate to use use regex".indexOf("use").toString());
+    print("Index Of 3: \"hi i hate to use use use regex\".indexOf(\"use\"): "+ "hi i hate to use use use regex".indexOf("use").toString());
+    print("Index Of 4: "+ "hi i hate to  regex\".indexOf(\"use\") : "+ "hi i hate to  regex".indexOf("use").toString());
+    print("Index Of 5: \"hi i hate touse regex\".indexOf(\"use\") : "+ "hi i hate touse regex".indexOf("use").toString());
     //Note : pattern here isn't a pattern obj or regex
-    print("Index Of 6: : "+ "hi i hate touse use regex".indexOf("\suse").toString());
+    print("Index Of 6: \"hi i hate touse use regex\".indexOf(\"\\suse\"): "+ "hi i hate touse use regex".indexOf("\\suse").toString());
     print("Index Of 7: : "+ "hi i hate to use use986 regex".indexOf("\\suse\\s").toString());
     //using **start** argument
     print("Index Of : : "+ "hi i hate to use use regex".indexOf("use",14).toString());
     // print("Index Of : : "+ "hi i hate to use use regex".indexOf("use",-3).toString());
     //RangeError (start): Invalid value: Not in inclusive range 0..26: -3
-
+   /*Output :
+   * Index Of 1: "hi i hate to use regex".indexOf("hate") : 5
+    Index Of 2: "hi i hate to use use regex".indexOf("use"): 13
+    Index Of 3: "hi i hate to use use use regex".indexOf("use"): 13
+    Index Of 4: hi i hate to  regex".indexOf("use") : -1
+    Index Of 5: "hi i hate touse regex".indexOf("use") : 12
+    Index Of 6: "hi i hate touse use regex".indexOf("\suse"): -1
+    Index Of 7: : -1
+    Index Of : : 17
+   * */
   ```
 
-### 5. stringObj._subString(int start,int end)_
+### 5. stringObj._substring(int start,int end)_
   : returns substring of str-object from start index to end index -1.
    
-  **Returns :** string 
+  **Returns :** string
+  ```dart
+  //substring(start[,end])
+  //setting start only
+  print("substring 1: : "+ "1234567890AString Containing Numerical Characters".substring(10));
+  print("substring 2: : "+ "1234567890AString Containing Numerical Characters".substring(20));
+  print("substring 3: :"+ "1234567890AString Containing Numerical Characters".substring(10,20));
+  // print("substring 4: :"+ "1234567890AString Containing Numerical Characters".substring(20,10));
+  //Error : Unhandled exception:
+  // RangeError: Value not in range: 20
+  print("substring 5: : "+ "hi its there".substring(2,8));
+  /*Ouput:
+  * substring 1: "1234567890AString Containing Numerical Characters".substring(10) : AString Containing Numerical Characters
+  substring 2: "1234567890AString Containing Numerical Characters".substring(10) : ntaining Numerical Characters
+  substring 3: "1234567890AString Containing Numerical Characters".substring(10) :AString Co
+  substring 5: "hi its there".substring(2,8):  its t
+  * */
+```
    
